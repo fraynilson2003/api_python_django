@@ -72,6 +72,8 @@ PROJECT_APPS=[
 
 INSTALLED_APPS= DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS 
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -85,15 +87,16 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_CREDENTIALS = False
+
+
+
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
     "https://portafolio-back-end-ten.vercel.app"
    
 ]
 # CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:5173',
     "https://portafolio-back-end-ten.vercel.app"
     
 ]
