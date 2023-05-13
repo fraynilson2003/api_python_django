@@ -91,12 +91,14 @@ CORS_ALLOW_CREDENTIALS = False
 
 
 CORS_ALLOWED_ORIGINS = [
+    "https://apipythondjango-production.up.railway.app",
     "https://portafolio-back-end-ten.vercel.app"
    
 ]
 # CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = [
+    "https://apipythondjango-production.up.railway.app",
     "https://portafolio-back-end-ten.vercel.app"
     
 ]
