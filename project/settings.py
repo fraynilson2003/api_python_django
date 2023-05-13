@@ -88,10 +88,10 @@ MIDDLEWARE = [
 
 CORS_ALLOW_CREDENTIALS = False
 
+ALLOWED_HOSTS = ["http://0.0.0.0:apipythondjango-production.up.railway.app"]
 
 
 CORS_ALLOWED_ORIGINS = [
-    
     "http://0.0.0.0:apipythondjango-production.up.railway.app",
     "https://portafolio-back-end-ten.vercel.app"
    
