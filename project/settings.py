@@ -141,7 +141,6 @@ DATABASES = {
         'PASSWORD': "rx9JLlkGROB0JnBihvZX",
         'HOST': "containers-us-west-101.railway.app",
         'PORT': "6638"
-        
     }
 }
 
