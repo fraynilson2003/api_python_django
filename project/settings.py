@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2+c0+hn9o!x7cbhm87+pzv4v@96l$6lk$m4did(m_vtsxw%+hy'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://apipythondjango-production.up.railway.app", "127.0.0:1", "apipythondjango-production.up.railway.app"]
+
+ALLOWED_HOSTS = [os.getenv('APP_BACKEND'), "127.0.0:1"]
 
 
 # Application definition
@@ -142,11 +146,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': "postgres",
-        'PASSWORD': "XuP9qHElSKEiMzxpRT6V",
-        'HOST': "containers-us-west-16.railway.app",
-        'PORT': "6494"
+        'NAME': os.getenv('PGDATABASE'),
+        'USER': os.getenv("PGUSER"),
+        'PASSWORD': os.getenv("PGPASSWORD"),
+        'HOST': os.getenv("PGHOST"),
+        'PORT': os.getenv("PGPORT")
     }
 }
 
