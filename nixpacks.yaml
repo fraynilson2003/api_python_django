@@ -1,7 +1,0 @@
-name: project
-version: 1.0.0
-setup:
-  python: python310
-  tools:
-    - gcc
-start: python manage.py runserver
