@@ -91,6 +91,7 @@ CORS_ALLOW_CREDENTIALS = False
 
 
 CORS_ALLOWED_ORIGINS = [
+    
     "https://apipythondjango-production.up.railway.app",
     "https://portafolio-back-end-ten.vercel.app"
    
